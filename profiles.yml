@@ -1,0 +1,10 @@
+config:
+  send_anonymous_usage_stats: False
+
+supercell:
+  target: default
+  outputs:
+    default:
+      type: duckdb
+      path: /home/harsha/data_actions/supercell_cloudops/supercell.duckdb # e.g. /home/harish/dev/supercell.duckdb
+      threads: 4

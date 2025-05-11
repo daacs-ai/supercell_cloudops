@@ -1,0 +1,6 @@
+dbt-core
+pandas
+dbt-duckdb
+jupyter
+duckdb
+matplotlib
