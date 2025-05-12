@@ -21516,3 +21516,1203 @@ drop table if exists "supercell"."main"."total_cost__dbt_backup" cascade
 [0m19:06:19.665690 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.1274412, "process_in_blocks": "1736", "process_kernel_time": 0.185883, "process_mem_max_rss": "207100", "process_out_blocks": "57096", "process_user_time": 2.089689}
 [0m19:06:19.665997 [debug] [MainThread]: Command `dbt run` succeeded at 19:06:19.665934 after 1.13 seconds
 [0m19:06:19.666220 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:16:34.029511 | 2edb25ab-18b4-402c-b42a-67baebcfc669 ==============================
+[0m19:16:34.029511 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:16:34.031585 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/harsha/data_actions/supercell_cloudops', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/harsha/data_actions/supercell_cloudops/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt docs generate', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m19:16:34.032097 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:16:34.182482 [info ] [MainThread]: Registered adapter: duckdb=1.9.3
+[0m19:16:34.220196 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m19:16:34.259416 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:16:34.259682 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:16:34.263818 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.supercell.example
+[0m19:16:34.285305 [info ] [MainThread]: Found 5 models, 428 macros
+[0m19:16:34.286625 [info ] [MainThread]: 
+[0m19:16:34.286985 [info ] [MainThread]: Concurrency: 4 threads (target='default')
+[0m19:16:34.287192 [info ] [MainThread]: 
+[0m19:16:34.287515 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m19:16:34.291492 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_supercell_main'
+[0m19:16:34.316718 [debug] [ThreadPool]: Using duckdb connection "list_supercell_main"
+[0m19:16:34.317012 [debug] [ThreadPool]: On list_supercell_main: BEGIN
+[0m19:16:34.317233 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:16:34.321260 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: BEGIN
+[0m19:16:34.321491 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m19:16:34.322164 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:16:34.322406 [debug] [MainThread]: Connection 'list_supercell_main' was properly closed.
+[0m19:16:34.322689 [error] [MainThread]: Encountered an error:
+Runtime Error
+  IO Error: Could not set lock on file "/home/harsha/data_actions/supercell_cloudops/supercell.duckdb": Conflicting lock is held in /usr/bin/python3.12 (PID 2720043) by user harsha. See also https://duckdb.org/docs/connect/concurrency
+[0m19:16:34.323490 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": false, "command_wall_clock_time": 0.3253908, "process_in_blocks": "248", "process_kernel_time": 0.087735, "process_mem_max_rss": "132452", "process_out_blocks": "40", "process_user_time": 1.045844}
+[0m19:16:34.324048 [debug] [MainThread]: Command `dbt docs generate` failed at 19:16:34.323937 after 0.33 seconds
+[0m19:16:34.324366 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:16:46.006635 | 3bae7eaf-228e-4f0c-a346-84e8bc21f6f0 ==============================
+[0m19:16:46.006635 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:16:46.009593 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/harsha/data_actions/supercell_cloudops', 'debug': 'False', 'warn_error': 'None', 'log_path': '/home/harsha/data_actions/supercell_cloudops/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt docs generate', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m19:16:46.009942 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:16:46.164223 [info ] [MainThread]: Registered adapter: duckdb=1.9.3
+[0m19:16:46.203277 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m19:16:46.245308 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:16:46.245606 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:16:46.250257 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.supercell.example
+[0m19:16:46.270123 [info ] [MainThread]: Found 5 models, 428 macros
+[0m19:16:46.271416 [info ] [MainThread]: 
+[0m19:16:46.271680 [info ] [MainThread]: Concurrency: 4 threads (target='default')
+[0m19:16:46.271854 [info ] [MainThread]: 
+[0m19:16:46.272120 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m19:16:46.275437 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_supercell_main'
+[0m19:16:46.297975 [debug] [ThreadPool]: Using duckdb connection "list_supercell_main"
+[0m19:16:46.298301 [debug] [ThreadPool]: On list_supercell_main: BEGIN
+[0m19:16:46.298503 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:16:46.306116 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m19:16:46.306396 [debug] [ThreadPool]: Using duckdb connection "list_supercell_main"
+[0m19:16:46.306572 [debug] [ThreadPool]: On list_supercell_main: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "connection_name": "list_supercell_main"} */
+select
+      'supercell' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'supercell'
+  
+[0m19:16:46.314997 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m19:16:46.315920 [debug] [ThreadPool]: On list_supercell_main: ROLLBACK
+[0m19:16:46.316584 [debug] [ThreadPool]: Failed to rollback 'list_supercell_main'
+[0m19:16:46.316785 [debug] [ThreadPool]: On list_supercell_main: Close
+[0m19:16:46.319459 [debug] [Thread-1 (]: Began running node model.supercell.cleaned_usagelogs
+[0m19:16:46.321545 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_supercell_main, now model.supercell.cleaned_usagelogs)
+[0m19:16:46.321951 [debug] [Thread-1 (]: Began compiling node model.supercell.cleaned_usagelogs
+[0m19:16:46.328432 [debug] [Thread-1 (]: Writing injected SQL for node "model.supercell.cleaned_usagelogs"
+[0m19:16:46.329034 [debug] [Thread-1 (]: Began executing node model.supercell.cleaned_usagelogs
+[0m19:16:46.329733 [debug] [Thread-1 (]: Finished running node model.supercell.cleaned_usagelogs
+[0m19:16:46.330551 [debug] [Thread-3 (]: Began running node model.supercell.dim_accounts
+[0m19:16:46.330988 [debug] [Thread-4 (]: Began running node model.supercell.dim_resource
+[0m19:16:46.331443 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.supercell.dim_accounts'
+[0m19:16:46.331941 [debug] [Thread-2 (]: Began running node model.supercell.fact_bill_generation
+[0m19:16:46.332494 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.supercell.dim_resource'
+[0m19:16:46.332942 [debug] [Thread-3 (]: Began compiling node model.supercell.dim_accounts
+[0m19:16:46.333585 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.supercell.fact_bill_generation'
+[0m19:16:46.334129 [debug] [Thread-4 (]: Began compiling node model.supercell.dim_resource
+[0m19:16:46.336445 [debug] [Thread-3 (]: Writing injected SQL for node "model.supercell.dim_accounts"
+[0m19:16:46.336985 [debug] [Thread-2 (]: Began compiling node model.supercell.fact_bill_generation
+[0m19:16:46.339323 [debug] [Thread-4 (]: Writing injected SQL for node "model.supercell.dim_resource"
+[0m19:16:46.339910 [debug] [Thread-3 (]: Began executing node model.supercell.dim_accounts
+[0m19:16:46.341941 [debug] [Thread-2 (]: Writing injected SQL for node "model.supercell.fact_bill_generation"
+[0m19:16:46.342802 [debug] [Thread-3 (]: Finished running node model.supercell.dim_accounts
+[0m19:16:46.343267 [debug] [Thread-4 (]: Began executing node model.supercell.dim_resource
+[0m19:16:46.344203 [debug] [Thread-4 (]: Finished running node model.supercell.dim_resource
+[0m19:16:46.344835 [debug] [Thread-2 (]: Began executing node model.supercell.fact_bill_generation
+[0m19:16:46.345224 [debug] [Thread-2 (]: Finished running node model.supercell.fact_bill_generation
+[0m19:16:46.346067 [debug] [Thread-1 (]: Began running node model.supercell.total_cost
+[0m19:16:46.346473 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.supercell.cleaned_usagelogs, now model.supercell.total_cost)
+[0m19:16:46.346807 [debug] [Thread-1 (]: Began compiling node model.supercell.total_cost
+[0m19:16:46.349271 [debug] [Thread-1 (]: Writing injected SQL for node "model.supercell.total_cost"
+[0m19:16:46.349769 [debug] [Thread-1 (]: Began executing node model.supercell.total_cost
+[0m19:16:46.350405 [debug] [Thread-1 (]: Finished running node model.supercell.total_cost
+[0m19:16:46.351641 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:16:46.351872 [debug] [MainThread]: Connection 'model.supercell.total_cost' was properly closed.
+[0m19:16:46.352045 [debug] [MainThread]: Connection 'model.supercell.dim_accounts' was properly closed.
+[0m19:16:46.352222 [debug] [MainThread]: Connection 'model.supercell.dim_resource' was properly closed.
+[0m19:16:46.352358 [debug] [MainThread]: Connection 'model.supercell.fact_bill_generation' was properly closed.
+[0m19:16:46.352881 [debug] [MainThread]: Command end result
+[0m19:16:46.380801 [debug] [MainThread]: Wrote artifact WritableManifest to /home/harsha/data_actions/supercell_cloudops/target/manifest.json
+[0m19:16:46.381769 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/harsha/data_actions/supercell_cloudops/target/semantic_manifest.json
+[0m19:16:46.385457 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/harsha/data_actions/supercell_cloudops/target/run_results.json
+[0m19:16:46.388072 [debug] [MainThread]: Acquiring new duckdb connection 'generate_catalog'
+[0m19:16:46.388256 [info ] [MainThread]: Building catalog
+[0m19:16:46.394240 [debug] [ThreadPool]: Acquiring new duckdb connection 'supercell.information_schema'
+[0m19:16:46.400912 [debug] [ThreadPool]: Using duckdb connection "supercell.information_schema"
+[0m19:16:46.401382 [debug] [ThreadPool]: On supercell.information_schema: BEGIN
+[0m19:16:46.401629 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:16:46.402128 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:16:46.402349 [debug] [ThreadPool]: Using duckdb connection "supercell.information_schema"
+[0m19:16:46.402513 [debug] [ThreadPool]: On supercell.information_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "connection_name": "supercell.information_schema"} */
+with relations AS (
+      select
+        t.table_name
+        , t.database_name
+        , t.schema_name
+        , 'BASE TABLE' as table_type
+        , t.comment as table_comment
+      from duckdb_tables() t
+      WHERE t.database_name = 'supercell'
+      UNION ALL
+      SELECT v.view_name as table_name
+      , v.database_name
+      , v.schema_name
+      , 'VIEW' as table_type
+      , v.comment as table_comment
+      from duckdb_views() v
+      WHERE v.database_name = 'supercell'
+    )
+    select
+        'supercell' as table_database,
+        r.schema_name as table_schema,
+        r.table_name,
+        r.table_type,
+        r.table_comment,
+        c.column_name,
+        c.column_index as column_index,
+        c.data_type as column_type,
+        c.comment as column_comment,
+        '' as table_owner
+    FROM relations r JOIN duckdb_columns() c ON r.schema_name = c.schema_name AND r.table_name = c.table_name
+    WHERE (upper(r.schema_name) = upper('main'))
+    ORDER BY
+        r.schema_name,
+        r.table_name,
+        c.column_index
+[0m19:16:46.407357 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m19:16:46.418303 [debug] [ThreadPool]: On supercell.information_schema: ROLLBACK
+[0m19:16:46.418804 [debug] [ThreadPool]: Failed to rollback 'supercell.information_schema'
+[0m19:16:46.418977 [debug] [ThreadPool]: On supercell.information_schema: Close
+[0m19:16:46.432861 [debug] [MainThread]: Wrote artifact CatalogArtifact to /home/harsha/data_actions/supercell_cloudops/target/catalog.json
+[0m19:16:46.441526 [debug] [MainThread]: Wrote artifact WritableManifest to /home/harsha/data_actions/supercell_cloudops/target/manifest.json
+[0m19:16:46.442423 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/harsha/data_actions/supercell_cloudops/target/semantic_manifest.json
+[0m19:16:46.442660 [info ] [MainThread]: Catalog written to /home/harsha/data_actions/supercell_cloudops/target/catalog.json
+[0m19:16:46.443264 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 0.4676059, "process_in_blocks": "3344", "process_kernel_time": 0.097948, "process_mem_max_rss": "144508", "process_out_blocks": "5216", "process_user_time": 1.275333}
+[0m19:16:46.443625 [debug] [MainThread]: Command `dbt docs generate` succeeded at 19:16:46.443553 after 0.47 seconds
+[0m19:16:46.443842 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m19:16:46.444012 [debug] [MainThread]: Connection 'supercell.information_schema' was properly closed.
+[0m19:16:46.444229 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:17:19.372156 | 5efb5d46-79b8-4d84-aaf5-b1b53c8b2780 ==============================
+[0m19:17:19.372156 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:17:19.374325 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/harsha/data_actions/supercell_cloudops', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/harsha/data_actions/supercell_cloudops/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt docs serve --port 8001', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m19:17:19.374542 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:17:43.958484 [error] [MainThread]: Encountered an error:
+
+[0m19:17:43.964547 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 235, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 311, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/main.py", line 301, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/task/docs/serve.py", line 29, in run
+    httpd.serve_forever()
+  File "/usr/lib/python3.12/socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m19:17:43.966613 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_success": false, "command_wall_clock_time": 24.625301, "process_in_blocks": "520", "process_kernel_time": 0.087959, "process_mem_max_rss": "114828", "process_out_blocks": "3368", "process_user_time": 0.939562}
+[0m19:17:43.967659 [debug] [MainThread]: Command `dbt docs serve` failed at 19:17:43.967444 after 24.63 seconds
+[0m19:17:43.968431 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:18:18.564868 | d1443664-e96f-4ff8-a469-b90856fa6677 ==============================
+[0m19:18:18.564868 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:18:18.567839 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/harsha/data_actions/supercell_cloudops', 'log_path': '/home/harsha/data_actions/supercell_cloudops/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt docs generate', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m19:18:18.568301 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:18:18.727579 [info ] [MainThread]: Registered adapter: duckdb=1.9.3
+[0m19:18:18.765745 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m19:18:18.806703 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 0 files added, 0 files changed.
+[0m19:18:18.807000 [debug] [MainThread]: Partial parsing: deleted file: supercell://models/supercell_models/dim_accounts.sql
+[0m19:18:18.835245 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.supercell.example
+[0m19:18:18.846648 [info ] [MainThread]: Found 4 models, 428 macros
+[0m19:18:18.847972 [info ] [MainThread]: 
+[0m19:18:18.848260 [info ] [MainThread]: Concurrency: 4 threads (target='default')
+[0m19:18:18.848456 [info ] [MainThread]: 
+[0m19:18:18.848758 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m19:18:18.852129 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_supercell_main'
+[0m19:18:18.874022 [debug] [ThreadPool]: Using duckdb connection "list_supercell_main"
+[0m19:18:18.874348 [debug] [ThreadPool]: On list_supercell_main: BEGIN
+[0m19:18:18.874527 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:18:18.881793 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m19:18:18.882073 [debug] [ThreadPool]: Using duckdb connection "list_supercell_main"
+[0m19:18:18.882299 [debug] [ThreadPool]: On list_supercell_main: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "connection_name": "list_supercell_main"} */
+select
+      'supercell' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'supercell'
+  
+[0m19:18:18.890522 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m19:18:18.891510 [debug] [ThreadPool]: On list_supercell_main: ROLLBACK
+[0m19:18:18.892178 [debug] [ThreadPool]: Failed to rollback 'list_supercell_main'
+[0m19:18:18.892398 [debug] [ThreadPool]: On list_supercell_main: Close
+[0m19:18:18.895286 [debug] [Thread-1 (]: Began running node model.supercell.cleaned_usagelogs
+[0m19:18:18.895813 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_supercell_main, now model.supercell.cleaned_usagelogs)
+[0m19:18:18.896216 [debug] [Thread-1 (]: Began compiling node model.supercell.cleaned_usagelogs
+[0m19:18:18.902235 [debug] [Thread-1 (]: Writing injected SQL for node "model.supercell.cleaned_usagelogs"
+[0m19:18:18.902642 [debug] [Thread-1 (]: Began executing node model.supercell.cleaned_usagelogs
+[0m19:18:18.903019 [debug] [Thread-1 (]: Finished running node model.supercell.cleaned_usagelogs
+[0m19:18:18.903818 [debug] [Thread-3 (]: Began running node model.supercell.dim_resource
+[0m19:18:18.904493 [debug] [Thread-4 (]: Began running node model.supercell.fact_bill_generation
+[0m19:18:18.905030 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.supercell.dim_resource'
+[0m19:18:18.905753 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.supercell.fact_bill_generation'
+[0m19:18:18.906291 [debug] [Thread-3 (]: Began compiling node model.supercell.dim_resource
+[0m19:18:18.906786 [debug] [Thread-4 (]: Began compiling node model.supercell.fact_bill_generation
+[0m19:18:18.909324 [debug] [Thread-3 (]: Writing injected SQL for node "model.supercell.dim_resource"
+[0m19:18:18.911798 [debug] [Thread-4 (]: Writing injected SQL for node "model.supercell.fact_bill_generation"
+[0m19:18:18.912562 [debug] [Thread-4 (]: Began executing node model.supercell.fact_bill_generation
+[0m19:18:18.913259 [debug] [Thread-4 (]: Finished running node model.supercell.fact_bill_generation
+[0m19:18:18.913742 [debug] [Thread-3 (]: Began executing node model.supercell.dim_resource
+[0m19:18:18.914410 [debug] [Thread-3 (]: Finished running node model.supercell.dim_resource
+[0m19:18:18.915162 [debug] [Thread-1 (]: Began running node model.supercell.total_cost
+[0m19:18:18.915423 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.supercell.cleaned_usagelogs, now model.supercell.total_cost)
+[0m19:18:18.915611 [debug] [Thread-1 (]: Began compiling node model.supercell.total_cost
+[0m19:18:18.917251 [debug] [Thread-1 (]: Writing injected SQL for node "model.supercell.total_cost"
+[0m19:18:18.917570 [debug] [Thread-1 (]: Began executing node model.supercell.total_cost
+[0m19:18:18.917905 [debug] [Thread-1 (]: Finished running node model.supercell.total_cost
+[0m19:18:18.918919 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:18:18.919154 [debug] [MainThread]: Connection 'model.supercell.total_cost' was properly closed.
+[0m19:18:18.919324 [debug] [MainThread]: Connection 'model.supercell.dim_resource' was properly closed.
+[0m19:18:18.919463 [debug] [MainThread]: Connection 'model.supercell.fact_bill_generation' was properly closed.
+[0m19:18:18.919957 [debug] [MainThread]: Command end result
+[0m19:18:18.947497 [debug] [MainThread]: Wrote artifact WritableManifest to /home/harsha/data_actions/supercell_cloudops/target/manifest.json
+[0m19:18:18.948376 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/harsha/data_actions/supercell_cloudops/target/semantic_manifest.json
+[0m19:18:18.952125 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/harsha/data_actions/supercell_cloudops/target/run_results.json
+[0m19:18:18.953559 [debug] [MainThread]: Acquiring new duckdb connection 'generate_catalog'
+[0m19:18:18.953749 [info ] [MainThread]: Building catalog
+[0m19:18:18.959799 [debug] [ThreadPool]: Acquiring new duckdb connection 'supercell.information_schema'
+[0m19:18:18.965207 [debug] [ThreadPool]: Using duckdb connection "supercell.information_schema"
+[0m19:18:18.965456 [debug] [ThreadPool]: On supercell.information_schema: BEGIN
+[0m19:18:18.965616 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:18:18.966266 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:18:18.966474 [debug] [ThreadPool]: Using duckdb connection "supercell.information_schema"
+[0m19:18:18.966649 [debug] [ThreadPool]: On supercell.information_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "connection_name": "supercell.information_schema"} */
+with relations AS (
+      select
+        t.table_name
+        , t.database_name
+        , t.schema_name
+        , 'BASE TABLE' as table_type
+        , t.comment as table_comment
+      from duckdb_tables() t
+      WHERE t.database_name = 'supercell'
+      UNION ALL
+      SELECT v.view_name as table_name
+      , v.database_name
+      , v.schema_name
+      , 'VIEW' as table_type
+      , v.comment as table_comment
+      from duckdb_views() v
+      WHERE v.database_name = 'supercell'
+    )
+    select
+        'supercell' as table_database,
+        r.schema_name as table_schema,
+        r.table_name,
+        r.table_type,
+        r.table_comment,
+        c.column_name,
+        c.column_index as column_index,
+        c.data_type as column_type,
+        c.comment as column_comment,
+        '' as table_owner
+    FROM relations r JOIN duckdb_columns() c ON r.schema_name = c.schema_name AND r.table_name = c.table_name
+    WHERE (upper(r.schema_name) = upper('main'))
+    ORDER BY
+        r.schema_name,
+        r.table_name,
+        c.column_index
+[0m19:18:18.971553 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m19:18:18.982782 [debug] [ThreadPool]: On supercell.information_schema: ROLLBACK
+[0m19:18:18.983358 [debug] [ThreadPool]: Failed to rollback 'supercell.information_schema'
+[0m19:18:18.983538 [debug] [ThreadPool]: On supercell.information_schema: Close
+[0m19:18:18.997730 [debug] [MainThread]: Wrote artifact CatalogArtifact to /home/harsha/data_actions/supercell_cloudops/target/catalog.json
+[0m19:18:19.006687 [debug] [MainThread]: Wrote artifact WritableManifest to /home/harsha/data_actions/supercell_cloudops/target/manifest.json
+[0m19:18:19.007581 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/harsha/data_actions/supercell_cloudops/target/semantic_manifest.json
+[0m19:18:19.007810 [info ] [MainThread]: Catalog written to /home/harsha/data_actions/supercell_cloudops/target/catalog.json
+[0m19:18:19.008436 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 0.47693092, "process_in_blocks": "0", "process_kernel_time": 0.112833, "process_mem_max_rss": "144720", "process_out_blocks": "6048", "process_user_time": 1.212211}
+[0m19:18:19.008829 [debug] [MainThread]: Command `dbt docs generate` succeeded at 19:18:19.008752 after 0.48 seconds
+[0m19:18:19.009076 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m19:18:19.009282 [debug] [MainThread]: Connection 'supercell.information_schema' was properly closed.
+[0m19:18:19.009480 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:18:22.980945 | 01208032-6ab4-4ed1-8df4-39cfe8602c98 ==============================
+[0m19:18:22.980945 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:18:22.984005 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/harsha/data_actions/supercell_cloudops/logs', 'debug': 'False', 'profiles_dir': '/home/harsha/data_actions/supercell_cloudops', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt docs serve --port 8001', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m19:18:22.984518 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:20:20.878194 [error] [MainThread]: Encountered an error:
+
+[0m19:20:20.882061 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 235, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 311, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/main.py", line 301, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/task/docs/serve.py", line 29, in run
+    httpd.serve_forever()
+  File "/usr/lib/python3.12/socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m19:20:20.884094 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_success": false, "command_wall_clock_time": 117.93379, "process_in_blocks": "0", "process_kernel_time": 0.068615, "process_mem_max_rss": "115024", "process_out_blocks": "3360", "process_user_time": 0.985843}
+[0m19:20:20.884778 [debug] [MainThread]: Command `dbt docs serve` failed at 19:20:20.884673 after 117.93 seconds
+[0m19:20:20.885113 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:20:33.081750 | e7058d58-5e13-4f92-a4c2-16b8489eac79 ==============================
+[0m19:20:33.081750 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:20:33.083845 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/harsha/data_actions/supercell_cloudops', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/harsha/data_actions/supercell_cloudops/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m19:20:33.084097 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:20:33.236908 [info ] [MainThread]: Registered adapter: duckdb=1.9.3
+[0m19:20:33.273527 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m19:20:33.311947 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m19:20:33.312292 [debug] [MainThread]: Partial parsing: added file: supercell://models/supercell_models/Supercell_usagelogs.sql
+[0m19:20:33.312549 [debug] [MainThread]: Partial parsing: updated file: supercell://models/supercell_models/cleaned_usagelogs.sql
+[0m19:20:33.446997 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.supercell.example
+[0m19:20:33.477788 [debug] [MainThread]: Wrote artifact WritableManifest to /home/harsha/data_actions/supercell_cloudops/target/manifest.json
+[0m19:20:33.478750 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/harsha/data_actions/supercell_cloudops/target/semantic_manifest.json
+[0m19:20:33.485050 [info ] [MainThread]: Found 5 models, 428 macros
+[0m19:20:33.486665 [info ] [MainThread]: 
+[0m19:20:33.486990 [info ] [MainThread]: Concurrency: 4 threads (target='default')
+[0m19:20:33.487216 [info ] [MainThread]: 
+[0m19:20:33.487548 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m19:20:33.491735 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_supercell'
+[0m19:20:33.512400 [debug] [ThreadPool]: Using duckdb connection "list_supercell"
+[0m19:20:33.512693 [debug] [ThreadPool]: On list_supercell: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "connection_name": "list_supercell"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"supercell"'
+    
+  
+  
+[0m19:20:33.512907 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:20:33.520845 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m19:20:33.521838 [debug] [ThreadPool]: On list_supercell: Close
+[0m19:20:33.522528 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_supercell, now create_supercell_main)
+[0m19:20:33.522849 [debug] [ThreadPool]: Creating schema "database: "supercell"
+schema: "main"
+"
+[0m19:20:33.526687 [debug] [ThreadPool]: Using duckdb connection "create_supercell_main"
+[0m19:20:33.526900 [debug] [ThreadPool]: On create_supercell_main: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "connection_name": "create_supercell_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='supercell'
+        and type='sqlite'
+    
+  
+[0m19:20:33.527094 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:20:33.527730 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:20:33.528473 [debug] [ThreadPool]: Using duckdb connection "create_supercell_main"
+[0m19:20:33.528670 [debug] [ThreadPool]: On create_supercell_main: BEGIN
+[0m19:20:33.529025 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:20:33.529242 [debug] [ThreadPool]: Using duckdb connection "create_supercell_main"
+[0m19:20:33.529406 [debug] [ThreadPool]: On create_supercell_main: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "connection_name": "create_supercell_main"} */
+
+    
+    
+        create schema if not exists "supercell"."main"
+    
+[0m19:20:33.529727 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:20:33.530218 [debug] [ThreadPool]: On create_supercell_main: COMMIT
+[0m19:20:33.530419 [debug] [ThreadPool]: Using duckdb connection "create_supercell_main"
+[0m19:20:33.530599 [debug] [ThreadPool]: On create_supercell_main: COMMIT
+[0m19:20:33.530866 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:20:33.531059 [debug] [ThreadPool]: On create_supercell_main: Close
+[0m19:20:33.532121 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_supercell_main, now list_supercell_main)
+[0m19:20:33.535385 [debug] [ThreadPool]: Using duckdb connection "list_supercell_main"
+[0m19:20:33.535598 [debug] [ThreadPool]: On list_supercell_main: BEGIN
+[0m19:20:33.535776 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:20:33.536249 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:20:33.536452 [debug] [ThreadPool]: Using duckdb connection "list_supercell_main"
+[0m19:20:33.536638 [debug] [ThreadPool]: On list_supercell_main: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "connection_name": "list_supercell_main"} */
+select
+      'supercell' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'supercell'
+  
+[0m19:20:33.544599 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m19:20:33.545536 [debug] [ThreadPool]: On list_supercell_main: ROLLBACK
+[0m19:20:33.546245 [debug] [ThreadPool]: Failed to rollback 'list_supercell_main'
+[0m19:20:33.546460 [debug] [ThreadPool]: On list_supercell_main: Close
+[0m19:20:33.547463 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:20:33.547674 [debug] [MainThread]: On master: BEGIN
+[0m19:20:33.547859 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:20:33.548258 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:20:33.548448 [debug] [MainThread]: On master: COMMIT
+[0m19:20:33.548637 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:20:33.548806 [debug] [MainThread]: On master: COMMIT
+[0m19:20:33.549092 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:20:33.549309 [debug] [MainThread]: On master: Close
+[0m19:20:33.551498 [debug] [Thread-1 (]: Began running node model.supercell.Supercell_usagelogs
+[0m19:20:33.552061 [info ] [Thread-1 (]: 1 of 5 START sql table model main.Supercell_usagelogs .......................... [RUN]
+[0m19:20:33.552526 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_supercell_main, now model.supercell.Supercell_usagelogs)
+[0m19:20:33.552981 [debug] [Thread-1 (]: Began compiling node model.supercell.Supercell_usagelogs
+[0m19:20:33.560188 [debug] [Thread-1 (]: Writing injected SQL for node "model.supercell.Supercell_usagelogs"
+[0m19:20:33.560868 [debug] [Thread-1 (]: Began executing node model.supercell.Supercell_usagelogs
+[0m19:20:33.573950 [debug] [Thread-1 (]: Compilation Error in model Supercell_usagelogs (models/supercell_models/Supercell_usagelogs.sql)
+  When searching for a relation, dbt found an approximate match. Instead of guessing 
+  which relation to use, dbt will move on. Please delete "supercell"."main"."supercell_usagelogs", or rename it to be less ambiguous.
+  Searched for: "supercell"."main"."Supercell_usagelogs"
+  Found: "supercell"."main"."supercell_usagelogs"
+  
+  > in macro load_cached_relation (macros/adapters/relation.sql)
+  > called by macro materialization_table_duckdb (macros/materializations/table.sql)
+  > called by model Supercell_usagelogs (models/supercell_models/Supercell_usagelogs.sql)
+[0m19:20:33.575148 [error] [Thread-1 (]: 1 of 5 ERROR creating sql table model main.Supercell_usagelogs ................. [[31mERROR[0m in 0.02s]
+[0m19:20:33.575579 [debug] [Thread-1 (]: Finished running node model.supercell.Supercell_usagelogs
+[0m19:20:33.576250 [debug] [Thread-7 (]: Marking all children of 'model.supercell.Supercell_usagelogs' to be skipped because of status 'error'.  Reason: Compilation Error in model Supercell_usagelogs (models/supercell_models/Supercell_usagelogs.sql)
+  When searching for a relation, dbt found an approximate match. Instead of guessing 
+  which relation to use, dbt will move on. Please delete "supercell"."main"."supercell_usagelogs", or rename it to be less ambiguous.
+  Searched for: "supercell"."main"."Supercell_usagelogs"
+  Found: "supercell"."main"."supercell_usagelogs"
+  
+  > in macro load_cached_relation (macros/adapters/relation.sql)
+  > called by macro materialization_table_duckdb (macros/materializations/table.sql)
+  > called by model Supercell_usagelogs (models/supercell_models/Supercell_usagelogs.sql).
+[0m19:20:33.577911 [debug] [Thread-3 (]: Began running node model.supercell.cleaned_usagelogs
+[0m19:20:33.578725 [info ] [Thread-3 (]: 2 of 5 SKIP relation main.cleaned_usagelogs .................................... [[33mSKIP[0m]
+[0m19:20:33.579323 [debug] [Thread-3 (]: Finished running node model.supercell.cleaned_usagelogs
+[0m19:20:33.580326 [debug] [Thread-2 (]: Began running node model.supercell.dim_resource
+[0m19:20:33.581087 [debug] [Thread-1 (]: Began running node model.supercell.fact_bill_generation
+[0m19:20:33.580821 [info ] [Thread-2 (]: 3 of 5 SKIP relation main.dim_resource ......................................... [[33mSKIP[0m]
+[0m19:20:33.581904 [debug] [Thread-2 (]: Finished running node model.supercell.dim_resource
+[0m19:20:33.581370 [info ] [Thread-1 (]: 4 of 5 SKIP relation main.fact_bill_generation ................................. [[33mSKIP[0m]
+[0m19:20:33.582340 [debug] [Thread-1 (]: Finished running node model.supercell.fact_bill_generation
+[0m19:20:33.582937 [debug] [Thread-3 (]: Began running node model.supercell.total_cost
+[0m19:20:33.583362 [info ] [Thread-3 (]: 5 of 5 SKIP relation main.total_cost ........................................... [[33mSKIP[0m]
+[0m19:20:33.583761 [debug] [Thread-3 (]: Finished running node model.supercell.total_cost
+[0m19:20:33.585118 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:20:33.585400 [debug] [MainThread]: On master: BEGIN
+[0m19:20:33.585663 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:20:33.586841 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m19:20:33.587281 [debug] [MainThread]: On master: COMMIT
+[0m19:20:33.587506 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:20:33.587706 [debug] [MainThread]: On master: COMMIT
+[0m19:20:33.588307 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:20:33.588603 [debug] [MainThread]: On master: Close
+[0m19:20:33.588976 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:20:33.589197 [debug] [MainThread]: Connection 'model.supercell.Supercell_usagelogs' was properly closed.
+[0m19:20:33.589511 [info ] [MainThread]: 
+[0m19:20:33.589815 [info ] [MainThread]: Finished running 5 table models in 0 hours 0 minutes and 0.10 seconds (0.10s).
+[0m19:20:33.590407 [debug] [MainThread]: Command end result
+[0m19:20:33.600075 [debug] [MainThread]: Wrote artifact WritableManifest to /home/harsha/data_actions/supercell_cloudops/target/manifest.json
+[0m19:20:33.600924 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/harsha/data_actions/supercell_cloudops/target/semantic_manifest.json
+[0m19:20:33.604769 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/harsha/data_actions/supercell_cloudops/target/run_results.json
+[0m19:20:33.605091 [info ] [MainThread]: 
+[0m19:20:33.605408 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m19:20:33.605749 [info ] [MainThread]: 
+[0m19:20:33.605985 [error] [MainThread]:   Compilation Error in model Supercell_usagelogs (models/supercell_models/Supercell_usagelogs.sql)
+  When searching for a relation, dbt found an approximate match. Instead of guessing 
+  which relation to use, dbt will move on. Please delete "supercell"."main"."supercell_usagelogs", or rename it to be less ambiguous.
+  Searched for: "supercell"."main"."Supercell_usagelogs"
+  Found: "supercell"."main"."supercell_usagelogs"
+  
+  > in macro load_cached_relation (macros/adapters/relation.sql)
+  > called by macro materialization_table_duckdb (macros/materializations/table.sql)
+  > called by model Supercell_usagelogs (models/supercell_models/Supercell_usagelogs.sql)
+[0m19:20:33.606227 [info ] [MainThread]: 
+[0m19:20:33.606443 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=4 TOTAL=5
+[0m19:20:33.607231 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.55567575, "process_in_blocks": "384", "process_kernel_time": 0.093075, "process_mem_max_rss": "146168", "process_out_blocks": "2672", "process_user_time": 1.258024}
+[0m19:20:33.607538 [debug] [MainThread]: Command `dbt run` failed at 19:20:33.607480 after 0.56 seconds
+[0m19:20:33.607750 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:21:42.994995 | 1c90654d-7508-4810-9100-e32d4cb52070 ==============================
+[0m19:21:42.994995 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:21:42.998019 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/harsha/data_actions/supercell_cloudops', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/harsha/data_actions/supercell_cloudops/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m19:21:42.998416 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:21:43.152540 [info ] [MainThread]: Registered adapter: duckdb=1.9.3
+[0m19:21:43.190044 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m19:21:43.228862 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 1 files changed.
+[0m19:21:43.229224 [debug] [MainThread]: Partial parsing: added file: supercell://models/supercell_models/raw_usagelogs.sql
+[0m19:21:43.229568 [debug] [MainThread]: Partial parsing: deleted file: supercell://models/supercell_models/Supercell_usagelogs.sql
+[0m19:21:43.229778 [debug] [MainThread]: Partial parsing: updated file: supercell://models/supercell_models/cleaned_usagelogs.sql
+[0m19:21:43.369012 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.supercell.example
+[0m19:21:43.400406 [debug] [MainThread]: Wrote artifact WritableManifest to /home/harsha/data_actions/supercell_cloudops/target/manifest.json
+[0m19:21:43.401427 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/harsha/data_actions/supercell_cloudops/target/semantic_manifest.json
+[0m19:21:43.408813 [info ] [MainThread]: Found 5 models, 428 macros
+[0m19:21:43.409929 [info ] [MainThread]: 
+[0m19:21:43.410248 [info ] [MainThread]: Concurrency: 4 threads (target='default')
+[0m19:21:43.410462 [info ] [MainThread]: 
+[0m19:21:43.410809 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m19:21:43.414508 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_supercell'
+[0m19:21:43.435335 [debug] [ThreadPool]: Using duckdb connection "list_supercell"
+[0m19:21:43.435628 [debug] [ThreadPool]: On list_supercell: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "connection_name": "list_supercell"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"supercell"'
+    
+  
+  
+[0m19:21:43.435842 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:21:43.443509 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m19:21:43.444400 [debug] [ThreadPool]: On list_supercell: Close
+[0m19:21:43.444973 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_supercell, now create_supercell_main)
+[0m19:21:43.445281 [debug] [ThreadPool]: Creating schema "database: "supercell"
+schema: "main"
+"
+[0m19:21:43.449053 [debug] [ThreadPool]: Using duckdb connection "create_supercell_main"
+[0m19:21:43.449283 [debug] [ThreadPool]: On create_supercell_main: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "connection_name": "create_supercell_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='supercell'
+        and type='sqlite'
+    
+  
+[0m19:21:43.449475 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:21:43.450073 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:21:43.450843 [debug] [ThreadPool]: Using duckdb connection "create_supercell_main"
+[0m19:21:43.451045 [debug] [ThreadPool]: On create_supercell_main: BEGIN
+[0m19:21:43.451492 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:21:43.451672 [debug] [ThreadPool]: Using duckdb connection "create_supercell_main"
+[0m19:21:43.451839 [debug] [ThreadPool]: On create_supercell_main: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "connection_name": "create_supercell_main"} */
+
+    
+    
+        create schema if not exists "supercell"."main"
+    
+[0m19:21:43.452257 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:21:43.452779 [debug] [ThreadPool]: On create_supercell_main: COMMIT
+[0m19:21:43.452992 [debug] [ThreadPool]: Using duckdb connection "create_supercell_main"
+[0m19:21:43.453169 [debug] [ThreadPool]: On create_supercell_main: COMMIT
+[0m19:21:43.453432 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:21:43.453621 [debug] [ThreadPool]: On create_supercell_main: Close
+[0m19:21:43.454752 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_supercell_main, now list_supercell_main)
+[0m19:21:43.459704 [debug] [ThreadPool]: Using duckdb connection "list_supercell_main"
+[0m19:21:43.460038 [debug] [ThreadPool]: On list_supercell_main: BEGIN
+[0m19:21:43.460378 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:21:43.460926 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:21:43.461155 [debug] [ThreadPool]: Using duckdb connection "list_supercell_main"
+[0m19:21:43.461348 [debug] [ThreadPool]: On list_supercell_main: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "connection_name": "list_supercell_main"} */
+select
+      'supercell' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'supercell'
+  
+[0m19:21:43.469227 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m19:21:43.470057 [debug] [ThreadPool]: On list_supercell_main: ROLLBACK
+[0m19:21:43.470714 [debug] [ThreadPool]: Failed to rollback 'list_supercell_main'
+[0m19:21:43.470913 [debug] [ThreadPool]: On list_supercell_main: Close
+[0m19:21:43.471843 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:21:43.472047 [debug] [MainThread]: On master: BEGIN
+[0m19:21:43.472244 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:21:43.472631 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:21:43.472833 [debug] [MainThread]: On master: COMMIT
+[0m19:21:43.473005 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:21:43.473173 [debug] [MainThread]: On master: COMMIT
+[0m19:21:43.473461 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:21:43.473647 [debug] [MainThread]: On master: Close
+[0m19:21:43.475736 [debug] [Thread-1 (]: Began running node model.supercell.raw_usagelogs
+[0m19:21:43.476307 [info ] [Thread-1 (]: 1 of 5 START sql table model main.raw_usagelogs ................................ [RUN]
+[0m19:21:43.476750 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_supercell_main, now model.supercell.raw_usagelogs)
+[0m19:21:43.477111 [debug] [Thread-1 (]: Began compiling node model.supercell.raw_usagelogs
+[0m19:21:43.483840 [debug] [Thread-1 (]: Writing injected SQL for node "model.supercell.raw_usagelogs"
+[0m19:21:43.484340 [debug] [Thread-1 (]: Began executing node model.supercell.raw_usagelogs
+[0m19:21:43.502583 [debug] [Thread-1 (]: Writing runtime sql for node "model.supercell.raw_usagelogs"
+[0m19:21:43.502997 [debug] [Thread-1 (]: Using duckdb connection "model.supercell.raw_usagelogs"
+[0m19:21:43.503253 [debug] [Thread-1 (]: On model.supercell.raw_usagelogs: BEGIN
+[0m19:21:43.503447 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:21:43.503999 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:21:43.504241 [debug] [Thread-1 (]: Using duckdb connection "model.supercell.raw_usagelogs"
+[0m19:21:43.504415 [debug] [Thread-1 (]: On model.supercell.raw_usagelogs: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.raw_usagelogs"} */
+
+  
+    
+    
+
+    create  table
+      "supercell"."main"."raw_usagelogs__dbt_tmp"
+  
+    as (
+      
+
+select * from supercell_usagelogs
+    );
+  
+  
+[0m19:21:43.587857 [debug] [Thread-1 (]: SQL status: OK in 0.083 seconds
+[0m19:21:43.591776 [debug] [Thread-1 (]: Using duckdb connection "model.supercell.raw_usagelogs"
+[0m19:21:43.592068 [debug] [Thread-1 (]: On model.supercell.raw_usagelogs: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.raw_usagelogs"} */
+alter table "supercell"."main"."raw_usagelogs__dbt_tmp" rename to "raw_usagelogs"
+[0m19:21:43.592743 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:21:43.600343 [debug] [Thread-1 (]: On model.supercell.raw_usagelogs: COMMIT
+[0m19:21:43.600595 [debug] [Thread-1 (]: Using duckdb connection "model.supercell.raw_usagelogs"
+[0m19:21:43.600806 [debug] [Thread-1 (]: On model.supercell.raw_usagelogs: COMMIT
+[0m19:21:43.739886 [debug] [Thread-1 (]: SQL status: OK in 0.139 seconds
+[0m19:21:43.743037 [debug] [Thread-1 (]: Using duckdb connection "model.supercell.raw_usagelogs"
+[0m19:21:43.743305 [debug] [Thread-1 (]: On model.supercell.raw_usagelogs: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.raw_usagelogs"} */
+drop table if exists "supercell"."main"."raw_usagelogs__dbt_backup" cascade
+[0m19:21:43.743816 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:21:43.745220 [debug] [Thread-1 (]: On model.supercell.raw_usagelogs: Close
+[0m19:21:43.748121 [info ] [Thread-1 (]: 1 of 5 OK created sql table model main.raw_usagelogs ........................... [[32mOK[0m in 0.27s]
+[0m19:21:43.748520 [debug] [Thread-1 (]: Finished running node model.supercell.raw_usagelogs
+[0m19:21:43.749313 [debug] [Thread-3 (]: Began running node model.supercell.cleaned_usagelogs
+[0m19:21:43.749743 [info ] [Thread-3 (]: 2 of 5 START sql table model main.cleaned_usagelogs ............................ [RUN]
+[0m19:21:43.750153 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.supercell.cleaned_usagelogs'
+[0m19:21:43.750417 [debug] [Thread-3 (]: Began compiling node model.supercell.cleaned_usagelogs
+[0m19:21:43.753714 [debug] [Thread-3 (]: Writing injected SQL for node "model.supercell.cleaned_usagelogs"
+[0m19:21:43.754642 [debug] [Thread-3 (]: Began executing node model.supercell.cleaned_usagelogs
+[0m19:21:43.757031 [debug] [Thread-3 (]: Writing runtime sql for node "model.supercell.cleaned_usagelogs"
+[0m19:21:43.757535 [debug] [Thread-3 (]: Using duckdb connection "model.supercell.cleaned_usagelogs"
+[0m19:21:43.757751 [debug] [Thread-3 (]: On model.supercell.cleaned_usagelogs: BEGIN
+[0m19:21:43.757955 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m19:21:43.758882 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m19:21:43.759252 [debug] [Thread-3 (]: Using duckdb connection "model.supercell.cleaned_usagelogs"
+[0m19:21:43.759481 [debug] [Thread-3 (]: On model.supercell.cleaned_usagelogs: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.cleaned_usagelogs"} */
+
+  
+    
+    
+
+    create  table
+      "supercell"."main"."cleaned_usagelogs__dbt_tmp"
+  
+    as (
+      
+
+
+SELECT
+    CAST("LinkedAccountId" AS VARCHAR) AS linked_account_id,
+    CAST("bill/PayerAccountId" AS VARCHAR) AS payer_account_id,
+    CAST("lineItem/UsageStartDate" AS TIMESTAMP) AS usage_start_date,
+    CAST("lineItem/UsageEndDate" AS TIMESTAMP) AS usage_end_date,
+    CAST("lineItem/UsageAmount" AS DECIMAL(18, 6)) AS usage_amount,
+    CAST("lineItem/Operation" AS VARCHAR) AS operation,
+    CAST("pricing/PricingModel" AS VARCHAR) AS pricing_model,
+    CAST("resourceTags/TagKeys" AS VARCHAR) AS tag_keys,
+    CAST("resourceTags/TagValues" AS VARCHAR) AS tag_values,
+    CAST("product/Region" AS VARCHAR) AS region,
+    CAST("product/ServiceCode" AS VARCHAR) AS service_code,
+    CAST("product/InstanceType" AS VARCHAR) AS instance_type,
+    CAST("amortized_cost" AS DECIMAL(18, 6)) AS amortized_cost,
+    CAST("product/Description" AS VARCHAR) AS description
+FROM "supercell"."main"."raw_usagelogs"
+WHERE
+    "LinkedAccountId" IS NOT NULL
+    AND "bill/PayerAccountId" IS NOT NULL
+    AND "lineItem/UsageStartDate" IS NOT NULL
+    AND "lineItem/UsageEndDate" IS NOT NULL
+    AND "lineItem/UsageAmount" IS NOT NULL
+    AND "lineItem/Operation" IS NOT NULL
+    AND "pricing/PricingModel" IS NOT NULL
+    AND "resourceTags/TagKeys" IS NOT NULL
+    AND "resourceTags/TagValues" IS NOT NULL
+    AND "product/Region" IS NOT NULL
+    AND "product/ServiceCode" IS NOT NULL
+    AND "product/InstanceType" IS NOT NULL
+    AND "amortized_cost" IS NOT NULL
+    AND "product/Description" IS NOT NULL
+    );
+  
+  
+[0m19:21:43.838082 [debug] [Thread-3 (]: SQL status: OK in 0.078 seconds
+[0m19:21:43.839875 [debug] [Thread-3 (]: Using duckdb connection "model.supercell.cleaned_usagelogs"
+[0m19:21:43.840131 [debug] [Thread-3 (]: On model.supercell.cleaned_usagelogs: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.cleaned_usagelogs"} */
+alter table "supercell"."main"."cleaned_usagelogs" rename to "cleaned_usagelogs__dbt_backup"
+[0m19:21:43.840666 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m19:21:43.842225 [debug] [Thread-3 (]: Using duckdb connection "model.supercell.cleaned_usagelogs"
+[0m19:21:43.842452 [debug] [Thread-3 (]: On model.supercell.cleaned_usagelogs: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.cleaned_usagelogs"} */
+alter table "supercell"."main"."cleaned_usagelogs__dbt_tmp" rename to "cleaned_usagelogs"
+[0m19:21:43.842813 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m19:21:43.845175 [debug] [Thread-3 (]: On model.supercell.cleaned_usagelogs: COMMIT
+[0m19:21:43.845387 [debug] [Thread-3 (]: Using duckdb connection "model.supercell.cleaned_usagelogs"
+[0m19:21:43.845566 [debug] [Thread-3 (]: On model.supercell.cleaned_usagelogs: COMMIT
+[0m19:21:43.933687 [debug] [Thread-3 (]: SQL status: OK in 0.088 seconds
+[0m19:21:43.935210 [debug] [Thread-3 (]: Using duckdb connection "model.supercell.cleaned_usagelogs"
+[0m19:21:43.935440 [debug] [Thread-3 (]: On model.supercell.cleaned_usagelogs: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.cleaned_usagelogs"} */
+drop table if exists "supercell"."main"."cleaned_usagelogs__dbt_backup" cascade
+[0m19:21:43.937254 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m19:21:43.938064 [debug] [Thread-3 (]: On model.supercell.cleaned_usagelogs: Close
+[0m19:21:43.939988 [info ] [Thread-3 (]: 2 of 5 OK created sql table model main.cleaned_usagelogs ....................... [[32mOK[0m in 0.19s]
+[0m19:21:43.940321 [debug] [Thread-3 (]: Finished running node model.supercell.cleaned_usagelogs
+[0m19:21:43.940974 [debug] [Thread-2 (]: Began running node model.supercell.dim_resource
+[0m19:21:43.941531 [debug] [Thread-1 (]: Began running node model.supercell.fact_bill_generation
+[0m19:21:43.941971 [info ] [Thread-2 (]: 3 of 5 START sql table model main.dim_resource ................................. [RUN]
+[0m19:21:43.942589 [info ] [Thread-1 (]: 4 of 5 START sql table model main.fact_bill_generation ......................... [RUN]
+[0m19:21:43.943110 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.supercell.dim_resource'
+[0m19:21:43.943636 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.supercell.raw_usagelogs, now model.supercell.fact_bill_generation)
+[0m19:21:43.944020 [debug] [Thread-2 (]: Began compiling node model.supercell.dim_resource
+[0m19:21:43.944517 [debug] [Thread-1 (]: Began compiling node model.supercell.fact_bill_generation
+[0m19:21:43.948253 [debug] [Thread-2 (]: Writing injected SQL for node "model.supercell.dim_resource"
+[0m19:21:43.950467 [debug] [Thread-1 (]: Writing injected SQL for node "model.supercell.fact_bill_generation"
+[0m19:21:43.951351 [debug] [Thread-1 (]: Began executing node model.supercell.fact_bill_generation
+[0m19:21:43.951823 [debug] [Thread-2 (]: Began executing node model.supercell.dim_resource
+[0m19:21:43.954419 [debug] [Thread-1 (]: Writing runtime sql for node "model.supercell.fact_bill_generation"
+[0m19:21:43.957160 [debug] [Thread-2 (]: Writing runtime sql for node "model.supercell.dim_resource"
+[0m19:21:43.957627 [debug] [Thread-1 (]: Using duckdb connection "model.supercell.fact_bill_generation"
+[0m19:21:43.957876 [debug] [Thread-2 (]: Using duckdb connection "model.supercell.dim_resource"
+[0m19:21:43.958107 [debug] [Thread-1 (]: On model.supercell.fact_bill_generation: BEGIN
+[0m19:21:43.958315 [debug] [Thread-2 (]: On model.supercell.dim_resource: BEGIN
+[0m19:21:43.958507 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:21:43.958698 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m19:21:43.959251 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m19:21:43.959471 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:21:43.959674 [debug] [Thread-2 (]: Using duckdb connection "model.supercell.dim_resource"
+[0m19:21:43.959870 [debug] [Thread-1 (]: Using duckdb connection "model.supercell.fact_bill_generation"
+[0m19:21:43.960067 [debug] [Thread-2 (]: On model.supercell.dim_resource: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.dim_resource"} */
+
+  
+    
+    
+
+    create  table
+      "supercell"."main"."dim_resource__dbt_tmp"
+  
+    as (
+      
+
+
+select
+    md5(concat(linked_account_id, '_', service_code, '_', instance_type, '_', region, '_', CAST(usage_start_date AS VARCHAR), '_', CAST(usage_end_date AS VARCHAR))) AS resource_id,
+    linked_account_id as linked_account_id,
+    region,
+    service_code as product,
+    instance_type as instance_type,
+    pricing_model as pricing_model,
+    tag_keys as tag_keys,
+    tag_values as tag_values
+from "supercell"."main"."cleaned_usagelogs"
+    );
+  
+  
+[0m19:21:43.960294 [debug] [Thread-1 (]: On model.supercell.fact_bill_generation: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.fact_bill_generation"} */
+
+  
+    
+    
+
+    create  table
+      "supercell"."main"."fact_bill_generation__dbt_tmp"
+  
+    as (
+      
+
+
+select
+    md5(concat(linked_account_id, '_', service_code, '_', instance_type, '_', region, '_', CAST(usage_start_date AS VARCHAR), '_', CAST(usage_end_date AS VARCHAR))) AS resource_id,
+    usage_start_date as start_date,
+    usage_end_date as bill_date,
+    usage_amount as bill_amount,
+    operation
+from "supercell"."main"."cleaned_usagelogs"
+    );
+  
+  
+[0m19:21:44.013054 [debug] [Thread-1 (]: SQL status: OK in 0.052 seconds
+[0m19:21:44.015020 [debug] [Thread-1 (]: Using duckdb connection "model.supercell.fact_bill_generation"
+[0m19:21:44.015377 [debug] [Thread-1 (]: On model.supercell.fact_bill_generation: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.fact_bill_generation"} */
+alter table "supercell"."main"."fact_bill_generation" rename to "fact_bill_generation__dbt_backup"
+[0m19:21:44.015988 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:21:44.017588 [debug] [Thread-1 (]: Using duckdb connection "model.supercell.fact_bill_generation"
+[0m19:21:44.017835 [debug] [Thread-1 (]: On model.supercell.fact_bill_generation: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.fact_bill_generation"} */
+alter table "supercell"."main"."fact_bill_generation__dbt_tmp" rename to "fact_bill_generation"
+[0m19:21:44.018281 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:21:44.019421 [debug] [Thread-1 (]: On model.supercell.fact_bill_generation: COMMIT
+[0m19:21:44.019665 [debug] [Thread-1 (]: Using duckdb connection "model.supercell.fact_bill_generation"
+[0m19:21:44.019866 [debug] [Thread-1 (]: On model.supercell.fact_bill_generation: COMMIT
+[0m19:21:44.032338 [debug] [Thread-1 (]: SQL status: OK in 0.012 seconds
+[0m19:21:44.035660 [debug] [Thread-1 (]: Using duckdb connection "model.supercell.fact_bill_generation"
+[0m19:21:44.036080 [debug] [Thread-1 (]: On model.supercell.fact_bill_generation: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.fact_bill_generation"} */
+drop table if exists "supercell"."main"."fact_bill_generation__dbt_backup" cascade
+[0m19:21:44.037965 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:21:44.039303 [debug] [Thread-1 (]: On model.supercell.fact_bill_generation: Close
+[0m19:21:44.040979 [info ] [Thread-1 (]: 4 of 5 OK created sql table model main.fact_bill_generation .................... [[32mOK[0m in 0.10s]
+[0m19:21:44.041708 [debug] [Thread-1 (]: Finished running node model.supercell.fact_bill_generation
+[0m19:21:44.060964 [debug] [Thread-2 (]: SQL status: OK in 0.100 seconds
+[0m19:21:44.062797 [debug] [Thread-2 (]: Using duckdb connection "model.supercell.dim_resource"
+[0m19:21:44.063037 [debug] [Thread-2 (]: On model.supercell.dim_resource: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.dim_resource"} */
+alter table "supercell"."main"."dim_resource" rename to "dim_resource__dbt_backup"
+[0m19:21:44.063533 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m19:21:44.065051 [debug] [Thread-2 (]: Using duckdb connection "model.supercell.dim_resource"
+[0m19:21:44.065290 [debug] [Thread-2 (]: On model.supercell.dim_resource: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.dim_resource"} */
+alter table "supercell"."main"."dim_resource__dbt_tmp" rename to "dim_resource"
+[0m19:21:44.065665 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m19:21:44.066636 [debug] [Thread-2 (]: On model.supercell.dim_resource: COMMIT
+[0m19:21:44.066878 [debug] [Thread-2 (]: Using duckdb connection "model.supercell.dim_resource"
+[0m19:21:44.067072 [debug] [Thread-2 (]: On model.supercell.dim_resource: COMMIT
+[0m19:21:44.090456 [debug] [Thread-2 (]: SQL status: OK in 0.023 seconds
+[0m19:21:44.091909 [debug] [Thread-2 (]: Using duckdb connection "model.supercell.dim_resource"
+[0m19:21:44.092142 [debug] [Thread-2 (]: On model.supercell.dim_resource: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.dim_resource"} */
+drop table if exists "supercell"."main"."dim_resource__dbt_backup" cascade
+[0m19:21:44.214622 [debug] [Thread-2 (]: SQL status: OK in 0.122 seconds
+[0m19:21:44.215648 [debug] [Thread-2 (]: On model.supercell.dim_resource: Close
+[0m19:21:44.218086 [info ] [Thread-2 (]: 3 of 5 OK created sql table model main.dim_resource ............................ [[32mOK[0m in 0.28s]
+[0m19:21:44.218497 [debug] [Thread-2 (]: Finished running node model.supercell.dim_resource
+[0m19:21:44.218974 [debug] [Thread-3 (]: Began running node model.supercell.total_cost
+[0m19:21:44.219316 [info ] [Thread-3 (]: 5 of 5 START sql table model main.total_cost ................................... [RUN]
+[0m19:21:44.219685 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.supercell.cleaned_usagelogs, now model.supercell.total_cost)
+[0m19:21:44.220015 [debug] [Thread-3 (]: Began compiling node model.supercell.total_cost
+[0m19:21:44.222368 [debug] [Thread-3 (]: Writing injected SQL for node "model.supercell.total_cost"
+[0m19:21:44.223297 [debug] [Thread-3 (]: Began executing node model.supercell.total_cost
+[0m19:21:44.226232 [debug] [Thread-3 (]: Writing runtime sql for node "model.supercell.total_cost"
+[0m19:21:44.226776 [debug] [Thread-3 (]: Using duckdb connection "model.supercell.total_cost"
+[0m19:21:44.226992 [debug] [Thread-3 (]: On model.supercell.total_cost: BEGIN
+[0m19:21:44.227187 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m19:21:44.227716 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m19:21:44.227919 [debug] [Thread-3 (]: Using duckdb connection "model.supercell.total_cost"
+[0m19:21:44.228116 [debug] [Thread-3 (]: On model.supercell.total_cost: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.total_cost"} */
+
+  
+    
+    
+
+    create  table
+      "supercell"."main"."total_cost__dbt_tmp"
+  
+    as (
+      
+
+with base as (
+    select
+        fact_bill_generation.resource_id,
+        date_trunc('month', fact_bill_generation.bill_date) as month,
+        fact_bill_generation.bill_amount,
+        dim_resource.instance_type,
+        dim_resource.product,
+        dim_resource.region,
+        dim_resource.pricing_model,
+        dim_resource.tag_keys,
+        dim_resource.tag_values
+    from "supercell"."main"."fact_bill_generation" as fact_bill_generation
+    left join "supercell"."main"."dim_resource" as dim_resource
+        on fact_bill_generation.resource_id = dim_resource.resource_id
+)
+
+select
+    month,
+    sum(bill_amount) as total_cost,
+    instance_type,
+    product,
+    region,
+    pricing_model,
+    tag_keys,
+    tag_values
+from base
+group by
+    month,
+    instance_type,
+    product,
+    region,
+    pricing_model,
+    tag_keys,
+    tag_values
+order by
+    month,
+    instance_type,
+    product,
+    region,
+    pricing_model,
+    tag_keys,
+    tag_values
+    );
+  
+  
+[0m19:21:44.280782 [debug] [Thread-3 (]: SQL status: OK in 0.052 seconds
+[0m19:21:44.282752 [debug] [Thread-3 (]: Using duckdb connection "model.supercell.total_cost"
+[0m19:21:44.283018 [debug] [Thread-3 (]: On model.supercell.total_cost: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.total_cost"} */
+alter table "supercell"."main"."total_cost" rename to "total_cost__dbt_backup"
+[0m19:21:44.283503 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m19:21:44.285104 [debug] [Thread-3 (]: Using duckdb connection "model.supercell.total_cost"
+[0m19:21:44.285327 [debug] [Thread-3 (]: On model.supercell.total_cost: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.total_cost"} */
+alter table "supercell"."main"."total_cost__dbt_tmp" rename to "total_cost"
+[0m19:21:44.285708 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m19:21:44.286728 [debug] [Thread-3 (]: On model.supercell.total_cost: COMMIT
+[0m19:21:44.286971 [debug] [Thread-3 (]: Using duckdb connection "model.supercell.total_cost"
+[0m19:21:44.287181 [debug] [Thread-3 (]: On model.supercell.total_cost: COMMIT
+[0m19:21:44.290023 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m19:21:44.291157 [debug] [Thread-3 (]: Using duckdb connection "model.supercell.total_cost"
+[0m19:21:44.291364 [debug] [Thread-3 (]: On model.supercell.total_cost: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "node_id": "model.supercell.total_cost"} */
+drop table if exists "supercell"."main"."total_cost__dbt_backup" cascade
+[0m19:21:44.293073 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m19:21:44.293874 [debug] [Thread-3 (]: On model.supercell.total_cost: Close
+[0m19:21:44.295058 [info ] [Thread-3 (]: 5 of 5 OK created sql table model main.total_cost .............................. [[32mOK[0m in 0.08s]
+[0m19:21:44.295391 [debug] [Thread-3 (]: Finished running node model.supercell.total_cost
+[0m19:21:44.296542 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:21:44.296992 [debug] [MainThread]: On master: BEGIN
+[0m19:21:44.297319 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:21:44.298008 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m19:21:44.298364 [debug] [MainThread]: On master: COMMIT
+[0m19:21:44.298674 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:21:44.298986 [debug] [MainThread]: On master: COMMIT
+[0m19:21:44.299853 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:21:44.300275 [debug] [MainThread]: On master: Close
+[0m19:21:44.300783 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:21:44.301091 [debug] [MainThread]: Connection 'model.supercell.fact_bill_generation' was properly closed.
+[0m19:21:44.301401 [debug] [MainThread]: Connection 'model.supercell.total_cost' was properly closed.
+[0m19:21:44.301674 [debug] [MainThread]: Connection 'model.supercell.dim_resource' was properly closed.
+[0m19:21:44.302124 [info ] [MainThread]: 
+[0m19:21:44.302590 [info ] [MainThread]: Finished running 5 table models in 0 hours 0 minutes and 0.89 seconds (0.89s).
+[0m19:21:44.303237 [debug] [MainThread]: Command end result
+[0m19:21:44.355793 [debug] [MainThread]: Wrote artifact WritableManifest to /home/harsha/data_actions/supercell_cloudops/target/manifest.json
+[0m19:21:44.356851 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/harsha/data_actions/supercell_cloudops/target/semantic_manifest.json
+[0m19:21:44.360445 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/harsha/data_actions/supercell_cloudops/target/run_results.json
+[0m19:21:44.360692 [info ] [MainThread]: 
+[0m19:21:44.360913 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:21:44.361087 [info ] [MainThread]: 
+[0m19:21:44.361290 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m19:21:44.361895 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.3981944, "process_in_blocks": "0", "process_kernel_time": 0.212881, "process_mem_max_rss": "211084", "process_out_blocks": "57064", "process_user_time": 2.182782}
+[0m19:21:44.362270 [debug] [MainThread]: Command `dbt run` succeeded at 19:21:44.362198 after 1.40 seconds
+[0m19:21:44.362493 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:22:30.482860 | db1ebc2a-d645-484c-85ce-cfd8484eb5f5 ==============================
+[0m19:22:30.482860 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:22:30.484898 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/harsha/data_actions/supercell_cloudops', 'log_path': '/home/harsha/data_actions/supercell_cloudops/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt docs generate', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m19:22:30.485159 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:22:30.634538 [info ] [MainThread]: Registered adapter: duckdb=1.9.3
+[0m19:22:30.670967 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m19:22:30.710421 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:22:30.710686 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:22:30.714884 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.supercell.example
+[0m19:22:30.734055 [info ] [MainThread]: Found 5 models, 428 macros
+[0m19:22:30.735160 [info ] [MainThread]: 
+[0m19:22:30.735445 [info ] [MainThread]: Concurrency: 4 threads (target='default')
+[0m19:22:30.735607 [info ] [MainThread]: 
+[0m19:22:30.735863 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m19:22:30.739343 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_supercell_main'
+[0m19:22:30.759897 [debug] [ThreadPool]: Using duckdb connection "list_supercell_main"
+[0m19:22:30.760236 [debug] [ThreadPool]: On list_supercell_main: BEGIN
+[0m19:22:30.760462 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:22:30.763829 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: BEGIN
+[0m19:22:30.764073 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m19:22:30.764673 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:22:30.765014 [debug] [MainThread]: Connection 'list_supercell_main' was properly closed.
+[0m19:22:30.765400 [error] [MainThread]: Encountered an error:
+Runtime Error
+  IO Error: Could not set lock on file "/home/harsha/data_actions/supercell_cloudops/supercell.duckdb": Conflicting lock is held in /usr/bin/python3.12 (PID 2740971) by user harsha. See also https://duckdb.org/docs/connect/concurrency
+[0m19:22:30.765919 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": false, "command_wall_clock_time": 0.31521973, "process_in_blocks": "0", "process_kernel_time": 0.090761, "process_mem_max_rss": "132548", "process_out_blocks": "40", "process_user_time": 1.061206}
+[0m19:22:30.766238 [debug] [MainThread]: Command `dbt docs generate` failed at 19:22:30.766170 after 0.32 seconds
+[0m19:22:30.766437 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:22:41.331514 | 8bf6c5cf-5a03-4a10-87f6-8f36de9cc8f4 ==============================
+[0m19:22:41.331514 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:22:41.334084 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/harsha/data_actions/supercell_cloudops', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/harsha/data_actions/supercell_cloudops/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt docs generate', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m19:22:41.334359 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:22:41.489100 [info ] [MainThread]: Registered adapter: duckdb=1.9.3
+[0m19:22:41.537337 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m19:22:41.579228 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:22:41.579478 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:22:41.584057 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.supercell.example
+[0m19:22:41.604232 [info ] [MainThread]: Found 5 models, 428 macros
+[0m19:22:41.605453 [info ] [MainThread]: 
+[0m19:22:41.605707 [info ] [MainThread]: Concurrency: 4 threads (target='default')
+[0m19:22:41.605896 [info ] [MainThread]: 
+[0m19:22:41.606260 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m19:22:41.609885 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_supercell_main'
+[0m19:22:41.631642 [debug] [ThreadPool]: Using duckdb connection "list_supercell_main"
+[0m19:22:41.631949 [debug] [ThreadPool]: On list_supercell_main: BEGIN
+[0m19:22:41.632142 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:22:41.639996 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m19:22:41.640285 [debug] [ThreadPool]: Using duckdb connection "list_supercell_main"
+[0m19:22:41.640466 [debug] [ThreadPool]: On list_supercell_main: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "connection_name": "list_supercell_main"} */
+select
+      'supercell' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'supercell'
+  
+[0m19:22:41.649523 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m19:22:41.650603 [debug] [ThreadPool]: On list_supercell_main: ROLLBACK
+[0m19:22:41.651284 [debug] [ThreadPool]: Failed to rollback 'list_supercell_main'
+[0m19:22:41.651498 [debug] [ThreadPool]: On list_supercell_main: Close
+[0m19:22:41.654639 [debug] [Thread-1 (]: Began running node model.supercell.raw_usagelogs
+[0m19:22:41.656680 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_supercell_main, now model.supercell.raw_usagelogs)
+[0m19:22:41.657078 [debug] [Thread-1 (]: Began compiling node model.supercell.raw_usagelogs
+[0m19:22:41.663532 [debug] [Thread-1 (]: Writing injected SQL for node "model.supercell.raw_usagelogs"
+[0m19:22:41.664109 [debug] [Thread-1 (]: Began executing node model.supercell.raw_usagelogs
+[0m19:22:41.664614 [debug] [Thread-1 (]: Finished running node model.supercell.raw_usagelogs
+[0m19:22:41.665334 [debug] [Thread-3 (]: Began running node model.supercell.cleaned_usagelogs
+[0m19:22:41.665874 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.supercell.cleaned_usagelogs'
+[0m19:22:41.666231 [debug] [Thread-3 (]: Began compiling node model.supercell.cleaned_usagelogs
+[0m19:22:41.668577 [debug] [Thread-3 (]: Writing injected SQL for node "model.supercell.cleaned_usagelogs"
+[0m19:22:41.669113 [debug] [Thread-3 (]: Began executing node model.supercell.cleaned_usagelogs
+[0m19:22:41.669703 [debug] [Thread-3 (]: Finished running node model.supercell.cleaned_usagelogs
+[0m19:22:41.670429 [debug] [Thread-2 (]: Began running node model.supercell.dim_resource
+[0m19:22:41.670899 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.supercell.dim_resource'
+[0m19:22:41.671259 [debug] [Thread-1 (]: Began running node model.supercell.fact_bill_generation
+[0m19:22:41.671594 [debug] [Thread-2 (]: Began compiling node model.supercell.dim_resource
+[0m19:22:41.672146 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.supercell.raw_usagelogs, now model.supercell.fact_bill_generation)
+[0m19:22:41.674423 [debug] [Thread-2 (]: Writing injected SQL for node "model.supercell.dim_resource"
+[0m19:22:41.674889 [debug] [Thread-1 (]: Began compiling node model.supercell.fact_bill_generation
+[0m19:22:41.676439 [debug] [Thread-1 (]: Writing injected SQL for node "model.supercell.fact_bill_generation"
+[0m19:22:41.676806 [debug] [Thread-1 (]: Began executing node model.supercell.fact_bill_generation
+[0m19:22:41.677178 [debug] [Thread-1 (]: Finished running node model.supercell.fact_bill_generation
+[0m19:22:41.677676 [debug] [Thread-2 (]: Began executing node model.supercell.dim_resource
+[0m19:22:41.678349 [debug] [Thread-2 (]: Finished running node model.supercell.dim_resource
+[0m19:22:41.679110 [debug] [Thread-3 (]: Began running node model.supercell.total_cost
+[0m19:22:41.679397 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.supercell.cleaned_usagelogs, now model.supercell.total_cost)
+[0m19:22:41.679605 [debug] [Thread-3 (]: Began compiling node model.supercell.total_cost
+[0m19:22:41.681124 [debug] [Thread-3 (]: Writing injected SQL for node "model.supercell.total_cost"
+[0m19:22:41.681445 [debug] [Thread-3 (]: Began executing node model.supercell.total_cost
+[0m19:22:41.681790 [debug] [Thread-3 (]: Finished running node model.supercell.total_cost
+[0m19:22:41.682655 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:22:41.682873 [debug] [MainThread]: Connection 'model.supercell.fact_bill_generation' was properly closed.
+[0m19:22:41.683045 [debug] [MainThread]: Connection 'model.supercell.total_cost' was properly closed.
+[0m19:22:41.683230 [debug] [MainThread]: Connection 'model.supercell.dim_resource' was properly closed.
+[0m19:22:41.683769 [debug] [MainThread]: Command end result
+[0m19:22:41.712453 [debug] [MainThread]: Wrote artifact WritableManifest to /home/harsha/data_actions/supercell_cloudops/target/manifest.json
+[0m19:22:41.713460 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/harsha/data_actions/supercell_cloudops/target/semantic_manifest.json
+[0m19:22:41.717372 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/harsha/data_actions/supercell_cloudops/target/run_results.json
+[0m19:22:41.718799 [debug] [MainThread]: Acquiring new duckdb connection 'generate_catalog'
+[0m19:22:41.719001 [info ] [MainThread]: Building catalog
+[0m19:22:41.725133 [debug] [ThreadPool]: Acquiring new duckdb connection 'supercell.information_schema'
+[0m19:22:41.731865 [debug] [ThreadPool]: Using duckdb connection "supercell.information_schema"
+[0m19:22:41.732233 [debug] [ThreadPool]: On supercell.information_schema: BEGIN
+[0m19:22:41.732682 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:22:41.733199 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:22:41.733410 [debug] [ThreadPool]: Using duckdb connection "supercell.information_schema"
+[0m19:22:41.733577 [debug] [ThreadPool]: On supercell.information_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "supercell", "target_name": "default", "connection_name": "supercell.information_schema"} */
+with relations AS (
+      select
+        t.table_name
+        , t.database_name
+        , t.schema_name
+        , 'BASE TABLE' as table_type
+        , t.comment as table_comment
+      from duckdb_tables() t
+      WHERE t.database_name = 'supercell'
+      UNION ALL
+      SELECT v.view_name as table_name
+      , v.database_name
+      , v.schema_name
+      , 'VIEW' as table_type
+      , v.comment as table_comment
+      from duckdb_views() v
+      WHERE v.database_name = 'supercell'
+    )
+    select
+        'supercell' as table_database,
+        r.schema_name as table_schema,
+        r.table_name,
+        r.table_type,
+        r.table_comment,
+        c.column_name,
+        c.column_index as column_index,
+        c.data_type as column_type,
+        c.comment as column_comment,
+        '' as table_owner
+    FROM relations r JOIN duckdb_columns() c ON r.schema_name = c.schema_name AND r.table_name = c.table_name
+    WHERE (upper(r.schema_name) = upper('main'))
+    ORDER BY
+        r.schema_name,
+        r.table_name,
+        c.column_index
+[0m19:22:41.739109 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m19:22:41.752568 [debug] [ThreadPool]: On supercell.information_schema: ROLLBACK
+[0m19:22:41.753080 [debug] [ThreadPool]: Failed to rollback 'supercell.information_schema'
+[0m19:22:41.753298 [debug] [ThreadPool]: On supercell.information_schema: Close
+[0m19:22:41.767533 [debug] [MainThread]: Wrote artifact CatalogArtifact to /home/harsha/data_actions/supercell_cloudops/target/catalog.json
+[0m19:22:41.776067 [debug] [MainThread]: Wrote artifact WritableManifest to /home/harsha/data_actions/supercell_cloudops/target/manifest.json
+[0m19:22:41.776866 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/harsha/data_actions/supercell_cloudops/target/semantic_manifest.json
+[0m19:22:41.777076 [info ] [MainThread]: Catalog written to /home/harsha/data_actions/supercell_cloudops/target/catalog.json
+[0m19:22:41.777712 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 0.47717577, "process_in_blocks": "0", "process_kernel_time": 0.094874, "process_mem_max_rss": "144836", "process_out_blocks": "5216", "process_user_time": 1.17444}
+[0m19:22:41.778102 [debug] [MainThread]: Command `dbt docs generate` succeeded at 19:22:41.778019 after 0.48 seconds
+[0m19:22:41.778400 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m19:22:41.778576 [debug] [MainThread]: Connection 'supercell.information_schema' was properly closed.
+[0m19:22:41.778757 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:22:47.305028 | 2e1f212d-88f8-4b27-b492-f897df619024 ==============================
+[0m19:22:47.305028 [info ] [MainThread]: Running with dbt=1.9.4
+[0m19:22:47.307214 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/harsha/data_actions/supercell_cloudops/logs', 'debug': 'False', 'profiles_dir': '/home/harsha/data_actions/supercell_cloudops', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt docs serve --port 8001', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m19:22:47.307420 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.

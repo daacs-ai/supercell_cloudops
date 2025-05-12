@@ -18,4 +18,19 @@ SELECT
     CAST("product/InstanceType" AS VARCHAR) AS instance_type,
     CAST("amortized_cost" AS DECIMAL(18, 6)) AS amortized_cost,
     CAST("product/Description" AS VARCHAR) AS description
-FROM supercell_usagelogs
+FROM {{ref('raw_usagelogs')}}
+WHERE
+    "LinkedAccountId" IS NOT NULL
+    AND "bill/PayerAccountId" IS NOT NULL
+    AND "lineItem/UsageStartDate" IS NOT NULL
+    AND "lineItem/UsageEndDate" IS NOT NULL
+    AND "lineItem/UsageAmount" IS NOT NULL
+    AND "lineItem/Operation" IS NOT NULL
+    AND "pricing/PricingModel" IS NOT NULL
+    AND "resourceTags/TagKeys" IS NOT NULL
+    AND "resourceTags/TagValues" IS NOT NULL
+    AND "product/Region" IS NOT NULL
+    AND "product/ServiceCode" IS NOT NULL
+    AND "product/InstanceType" IS NOT NULL
+    AND "amortized_cost" IS NOT NULL
+    AND "product/Description" IS NOT NULL

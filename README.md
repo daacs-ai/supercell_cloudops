@@ -1,10 +1,14 @@
 ### Modelling and problem statments are descibed in the following links
- - [text](https://miro.com/app/board/uXjVI36uB4k=/)
+ - [{da} framework LINK](https://miro.com/app/board/uXjVI36uB4k=/)
 
 
+### Install the requirment by creating a python virtual environment
+- run python3 seed.py
 
-### Using the starter project
-
-Try running the following commands:
+### Using DBT
+- Set the profile path to your dbt folder path in profiles.yml.
 - dbt run
-- dbt test
+
+
+### Start using the notebook
+- run all the required cells
