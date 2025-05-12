@@ -22716,3 +22716,37 @@ with relations AS (
 [0m19:22:47.307420 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
 
 User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m20:24:58.108045 [error] [MainThread]: Encountered an error:
+
+[0m20:24:58.112955 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 235, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/requires.py", line 311, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/cli/main.py", line 301, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/harsha/data_actions/supercell_cloudops/supercell_env/lib/python3.12/site-packages/dbt/task/docs/serve.py", line 29, in run
+    httpd.serve_forever()
+  File "/usr/lib/python3.12/socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m20:24:58.115158 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_success": false, "command_wall_clock_time": 3390.1855, "process_in_blocks": "272", "process_kernel_time": 0.179034, "process_mem_max_rss": "114716", "process_out_blocks": "3360", "process_user_time": 1.332115}
+[0m20:24:58.116441 [debug] [MainThread]: Command `dbt docs serve` failed at 20:24:58.116207 after 3390.19 seconds
+[0m20:24:58.117201 [debug] [MainThread]: Flushing usage events

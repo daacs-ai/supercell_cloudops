@@ -11,4 +11,5 @@
 
 
 ### Start using the notebook
+- Notebook link - [link](https://github.com/daacs-ai/supercell_cloudops/blob/main/supercell.ipynb)
 - run all the required cells
