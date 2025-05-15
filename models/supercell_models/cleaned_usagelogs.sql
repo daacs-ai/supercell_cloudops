@@ -2,13 +2,13 @@
     materialized='table'
 ) }}
 
-
 SELECT
+    uuid() AS resource_id,
     CAST("LinkedAccountId" AS VARCHAR) AS linked_account_id,
     CAST("bill/PayerAccountId" AS VARCHAR) AS payer_account_id,
     CAST("lineItem/UsageStartDate" AS TIMESTAMP) AS usage_start_date,
     CAST("lineItem/UsageEndDate" AS TIMESTAMP) AS usage_end_date,
-    CAST("lineItem/UsageAmount" AS DECIMAL(18, 6)) AS usage_amount,
+    CAST("lineItem/UsageAmount" AS DOUBLE) AS usage_amount,
     CAST("lineItem/Operation" AS VARCHAR) AS operation,
     CAST("pricing/PricingModel" AS VARCHAR) AS pricing_model,
     CAST("resourceTags/TagKeys" AS VARCHAR) AS tag_keys,
@@ -16,9 +16,9 @@ SELECT
     CAST("product/Region" AS VARCHAR) AS region,
     CAST("product/ServiceCode" AS VARCHAR) AS service_code,
     CAST("product/InstanceType" AS VARCHAR) AS instance_type,
-    CAST("amortized_cost" AS DECIMAL(18, 6)) AS amortized_cost,
+    CAST("amortized_cost" AS DOUBLE) AS amortized_cost,
     CAST("product/Description" AS VARCHAR) AS description
-FROM {{ref('raw_usagelogs')}}
+FROM {{ ref('raw_usagelogs') }}
 WHERE
     "LinkedAccountId" IS NOT NULL
     AND "bill/PayerAccountId" IS NOT NULL
