@@ -5,6 +5,10 @@ supercell:
   target: default
   outputs:
     default:
-      type: duckdb
-      path: /home/harsha/data_actions/supercell_cloudops/supercell.duckdb # e.g. /home/harish/dev/supercell.duckdb
-      threads: 4
+      type: clickhouse
+      schema: rightsize           # Your database/schema name
+      host: 3.108.206.137
+      port: 8123
+      user: default
+      password: default
+      database: rightsize         # Required for ClickHouse

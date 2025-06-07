@@ -1,0 +1,55 @@
+version: 2
+
+semantic_models:
+  - name: dim_resource
+    model: ref('dim_resource')
+    entities:
+      - name: resource
+        type: primary
+        expr: resource_id
+    dimensions:
+      - name: linked_account_id
+        type: categorical
+        expr: linked_account_id
+      - name: region
+        type: categorical
+        expr: region
+      - name: product
+        type: categorical
+        expr: product
+      - name: instance_type
+        type: categorical
+        expr: instance_type
+      - name: pricing_model
+        type: categorical
+        expr: pricing_model
+      - name: tag_keys
+        type: categorical
+        expr: tag_keys
+      - name: tag_values
+        type: categorical
+        expr: tag_values
+
+  - name: fact_bill_generation
+    model: ref('fact_bill_generation')
+    entities:
+      - name: billing_log
+        type: primary
+        expr: billing_log_id
+      - name: resource
+        type: foreign
+        expr: resource_id
+    dimensions:
+      - name: day_grain
+        type: time
+        expr: start_date
+        type_params:
+          time_granularity: day
+      - name: day_grain
+        type: time
+        expr: bill_date
+        type_params:
+          time_granularity: day
+      - name: operation
+        type: categorical
+        expr: operation

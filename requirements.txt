@@ -4,3 +4,5 @@ dbt-duckdb
 jupyter
 duckdb
 matplotlib
+dbt-clickhouse
+clickhouse_connect

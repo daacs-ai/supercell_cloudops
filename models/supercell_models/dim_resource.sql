@@ -6,7 +6,7 @@
 
 
 select
-    resource_id,
+    toString(resource_id) as resource_id,
     linked_account_id as linked_account_id,
     region,
     service_code as product,

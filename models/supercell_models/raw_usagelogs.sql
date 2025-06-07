@@ -2,4 +2,4 @@
     materialized='table'
 ) }}
 
-select * from supercell_usagelogs
+select * from aws_cost_usage
