@@ -1,6 +1,7 @@
 version: 2
 
 semantic_models:
+
   - name: dim_resource
     model: ref('dim_resource')
     entities:
