@@ -46,11 +46,9 @@ semantic_models:
         expr: start_date
         type_params:
           time_granularity: day
-      - name: day_grain
-        type: time
-        expr: bill_date
-        type_params:
-          time_granularity: day
+      - name: bill_amount
+        type: numerical
+        expr: bill_amount
       - name: operation
         type: categorical
         expr: operation
